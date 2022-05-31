@@ -1,0 +1,34 @@
+<meta charset = "UTF-8">
+<script>
+
+function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+
+}
+
+function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+
+}
+
+var totalPessoas = parseInt(prompt("Quantidade de funcionários: "));
+
+var numero = 1;
+var totalValores = 0;
+while(numero <= totalPessoas) {
+
+    var salario = parseFloat(prompt("Informe salario do funcionário " + numero +":"));
+    totalValores = totalValores + salario;
+    numero++;
+
+}
+var mediaValores = totalValores/totalPessoas;
+mostra ("Total de pessoas: "+ totalPessoas);
+mostra ("Total dos valores:"+ totalValores.toLocaleString('pt-br', {style:'currency',currency:'BRL'}));
+mostra("Média salarial: " + mediaValores.toLocaleString('pt-br', {style:'currency',currency:'BRL'}));
+mostra("FIM");
+</script>
